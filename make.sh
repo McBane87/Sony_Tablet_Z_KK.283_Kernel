@@ -21,4 +21,4 @@ ARCH=arm CROSS_COMPILE=./arm-eabi-4.6/bin/arm-eabi- make
 #fi
 
 ### Tablet Z
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.emmc=true" --pagesize 2048 --base 0x80200000 --kernel arch/arm/boot/zImage --ramdisk kernel.sin-ramdisk.cpio.gz --ramdisk_offset 0x02000000 -o boot.img
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.emmc=true" --pagesize 2048 --base 0x80200000 --kernel arch/arm/boot/zImage --ramdisk ramdisk.img --ramdisk_offset 0x02000000 -o boot.img
